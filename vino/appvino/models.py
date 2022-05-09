@@ -9,7 +9,7 @@ class Usuarios(models.Model):
     mail=models.EmailField()
 
     def __str__(self):
-        return "Usuarios"
+        return f"Usuario {self.nombre} {self.apellido}"
 class Vinos(models.Model):
     varietal=models.CharField(max_length=30)
     bodega=models.CharField(max_length=30)
@@ -17,7 +17,7 @@ class Vinos(models.Model):
     nombre=models.CharField(max_length=50)
 
     def __str__(self):
-        return "Vinos"
+        return f"Vino {self.nombre} de bodega {self.bodega}"
 
 class Bodegas(models.Model):
     nombre=models.CharField(max_length=50)
@@ -25,4 +25,4 @@ class Bodegas(models.Model):
     departamento=models.CharField(max_length=40)
 
     def __str__(self):
-        return "Bodegas"
+        return f"Bodega {self.nombre}"

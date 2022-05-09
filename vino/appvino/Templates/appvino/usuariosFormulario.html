@@ -1,0 +1,26 @@
+{% extends "appvino/padre.html" %}
+{% load static %}
+{% block principal %}
+
+Usuarios
+
+{% endblock %}
+
+{% block subtexto %} 
+Hacete usuario y comenzá a disfrutar
+{% endblock %}
+
+{% block formulario %}
+
+<form action="{% url 'usuariosFormulario' %}" method="post"> {% csrf_token %}
+<table>
+
+    {{ formulario.as_table }}
+
+</table>
+
+<input type="submit" value="Crear Usuario">
+
+</form>
+
+{% endblock %}
