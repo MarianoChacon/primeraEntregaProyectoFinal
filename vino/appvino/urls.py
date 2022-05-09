@@ -3,8 +3,8 @@ from django.urls import path
 from appvino import views
 
 urlpatterns = [
-    path('', views.inicio),
-    path('ususarios', views.usuarios),
-    path('bodegas', views.bodegas),
-    path('vinos', views.vinos),
+    path('', views.inicio, name='Inicio'),
+    path('usuarios', views.usuarios, name='Usuarios'),
+    path('bodegas', views.bodegas, name='Bodegas'),
+    path('vinos', views.vinos, name='Vinos'),
 ]
