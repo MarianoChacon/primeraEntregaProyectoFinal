@@ -74,4 +74,17 @@ def buscar(request):
     else:
         respuesta="No ingresó datos"
 
-    return HttpResponse(respuesta)
+    return render(request, 'appvino/resBusquedaUsuario.html', {"respuesta":respuesta})
+
+def buscarVino(request):
+    if request.GET["nombre"]:
+        nombre=request.GET['nombre']
+        vinos=Vinos.objects.filter(nombre__icontains=nombre)
+        return render(request, 'appvino/resBusquedaVino.html', {"vinos":vinos, "nombre":nombre})
+    else:
+        respuesta="No ingresó datos"
+
+    return render(request, 'appvino/resBusquedaVino.html', {"respuesta":respuesta})
+
+def busquedaVino(request):
+    return render(request, "appvino/busquedaVino.html")

@@ -13,4 +13,7 @@ urlpatterns = [
     path('bodegasFormularios', views.bodegasFormulario, name='bodegasFormulario'),
     path('busquedaUsuario', views.busquedaUsuario, name='busquedaUsuario'),
     path('buscar/', views.buscar, name='buscar'),
+    path('buscarVino/', views.buscarVino, name='buscarVino'),
+    path('busquedaVino', views.busquedaVino, name='busquedaVino'),
+
 ]

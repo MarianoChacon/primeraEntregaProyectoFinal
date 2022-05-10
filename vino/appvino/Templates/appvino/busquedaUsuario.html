@@ -2,7 +2,7 @@
 {% load static %}
 {% block principal %}
 
-Usuarios
+Búsqueda de Usuarios
 
 {% endblock %}
 
@@ -13,7 +13,7 @@ Usuarios
 
 <form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
 
-<input type="text" name="apellido" id="apellido">
+<input placeholder="Apellido" type="text" name="apellido" id="apellido">
 <input type="submit" value="Buscar Usuario">
 
 </form>
