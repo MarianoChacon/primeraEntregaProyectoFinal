@@ -1,0 +1,30 @@
+{% extends "appvino/padre.html" %}
+{% load static %}
+{% block principal %}
+
+Bodegas
+
+{% endblock %}
+
+{% block subtexto %} 
+Cargá los datos de tu bodega
+{% endblock %}
+
+{% block formulario %}
+
+{% if miFormulario.errors %}
+<p style="color:tomato;"> Coloque bien los datos</p>
+{% endif %}
+
+<form action="{% url 'bodegasFormulario' %}" method="post"> {% csrf_token %}
+<table>
+
+    {{ formulario.as_table }}
+
+</table>
+
+<input type="submit" value="Crear Bodega">
+
+</form>
+
+{% endblock %}
