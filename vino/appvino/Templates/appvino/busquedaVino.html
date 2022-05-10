@@ -1,0 +1,21 @@
+{% extends "appvino/padre.html" %}
+{% load static %}
+{% block principal %}
+
+Busqueda de Vinos
+
+{% endblock %}
+
+
+
+{% block formulario %}
+
+
+<form action="{% url 'buscarVino' %}" method="GET"> {% csrf_token %}
+
+<input placeholder="Nombre del vino" type="text" name="nombre" id="nombre">
+<input type="submit" value="Buscar Vino">
+
+</form>
+
+{% endblock %}

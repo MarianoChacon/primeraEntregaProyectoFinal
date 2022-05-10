@@ -1,0 +1,29 @@
+
+<title>Resultado Búsqueda</title>
+
+<div class="mx-auto col-lg-7 col-md-6">
+            <h1 class="text-center">Búsqueda de Usuarios</h1>
+                <p style="color:brown;">Usuario buscado:<b> {{ apellido }}</b></p>
+
+
+<ul>
+{% if not respuesta %}
+
+{% for usuario in usuarios %}
+    <li> {{usuario.nombre}} {{usuario.apellido}}</li>
+    
+
+{% empty %}
+    <h3>No se encontraron resultados que coincidan con su búsqueda</h3>
+
+ {% endfor %}
+ 
+{% else %}
+
+<h2 style="color:red">No se ingresaron datos</h2>
+
+{% endif %}
+</ul>
+
+<a class="btn btn-outline-primary" href="{% url 'busquedaUsuario' %}"><b>Volver a buscar</b></a>
+<br><a class="btn btn-outline-info" href="{% url 'Inicio' %}"><b>Volver al Inicio</b></a>

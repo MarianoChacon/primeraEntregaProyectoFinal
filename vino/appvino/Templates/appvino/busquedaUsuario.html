@@ -1,0 +1,21 @@
+{% extends "appvino/padre.html" %}
+{% load static %}
+{% block principal %}
+
+Búsqueda de Usuarios
+
+{% endblock %}
+
+
+
+{% block formulario %}
+
+
+<form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
+
+<input placeholder="Apellido" type="text" name="apellido" id="apellido">
+<input type="submit" value="Buscar Usuario">
+
+</form>
+
+{% endblock %}
