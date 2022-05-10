@@ -62,3 +62,16 @@ def bodegasFormulario(request):
         miFormularioBod=BodegasFormulario()
     
     return render (request, 'appvino/bodegasFormulario.html', {'formulario':miFormularioBod})
+
+def busquedaUsuario(request):
+    return render(request, "appvino/busquedaUsuario.html")
+
+def buscar(request):
+    if request.GET["apellido"]:
+        apellido=request.GET['apellido']
+        usuarios=Usuarios.objects.filter(apellido__icontains=apellido)
+        return render(request, 'appvino/resBusquedaUsuario.html', {"usuarios":usuarios, "apellido":apellido})
+    else:
+        respuesta="No ingresó datos"
+
+    return HttpResponse(respuesta)
