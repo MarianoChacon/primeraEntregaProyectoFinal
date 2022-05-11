@@ -1,4 +1,4 @@
-# primeraEntregaProyectoFinal
+# primeraEntregaProyectoFinalMarianoChacon
 
 Se ingresa a la página de Inicio. En la barra de navegación hay 5 botones. 
 
@@ -6,7 +6,7 @@ Los botones con fondo verde son los que nos llevan al template donde podemos ing
 En el caso de haber ingresado correctamente la información nos redirige a un template de confirmación que tiene 
 un botón para volver al inicio.
 
-Los botones de fondo azul son los que nos permiten realizar búsqueda de vinos o usuarios.
+Los botones de fondo naranja son los que nos permiten realizar búsqueda de vinos o usuarios.
 Tanto si la busqueda produce resultados como si no produce ningún resultado o no se ingresan datos
 nos dirige a un template con los resultados. Lo que cambia es el mensaje que obtenemos. Puede ser: una lista con
 los resultados, un mensaje de "No se encontraron resultados que coincidan con su búsqueda" o "No se ingresaron datos".
